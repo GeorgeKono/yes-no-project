@@ -41,6 +41,7 @@ button {
     color: whitesmoke;
     background-color: green;
     font-size: 0.5rem;
+    cursor: pointer;
 }
 
 .question-container {
