@@ -2,7 +2,10 @@
 
 function onAsk(ev) {
     ev.preventDefault()
-    checkUserInput()
+    
+    const isValid = checkUserInput()
+    
+    if (!isValid) return
     
     getAns(renderAns)
 }
@@ -18,10 +21,12 @@ function checkUserInput() {
     
     if (userInput.length < 3 || userInput.slice(-1) !== '?') {
         showUserMsg()
-        return
-    } else {
-        showLoader()
+        return false
     }
+    
+    hideUserMsg()
+    showLoader()
+    return true
 }
 
 function showUserMsg() {
