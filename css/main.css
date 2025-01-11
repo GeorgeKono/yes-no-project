@@ -32,3 +32,9 @@ input {
     border-radius: 8px;
     background-color: beige;
 }
+
+.user-msg {
+    margin: 20px;
+    background-color: brown;
+    font-size: x-large;
+}

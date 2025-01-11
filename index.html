@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <section class="main container">
+    <section class="main-container">
         <h1>Ask anything</h1>
         <h3>Yes/No</h4>
 
-        <input type="text" placeholder="Your Question">
+        <form onsubmit="onAsk(event)">
+            <input type="text" class="user-question" oninput="hideUserMsg()" placeholder="Your Question">
+            <button class="ask-btn">Ask</button>
+            <div hidden class="user-msg">
+                <h6>Please ask a question with at least 3 characters and ends with "?" symbol</h6>
+            </div>
+        </form>
     </section>
 
     <script src="js/main.js"></script>
