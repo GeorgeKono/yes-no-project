@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    color: lightgray;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: mediumseagreen;
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: whitesmoke;
+    margin-top: 20px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+input {
+    min-width: 20%;
+    max-width: 75%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: beige;
+}
