@@ -36,6 +36,20 @@ input {
 .question-container {
     padding-bottom: 20px;
 }
+
+.ans-container > * {
+    padding: 10px;
+}
+
+.ans-container h2 {
+    text-transform: capitalize;
+    color: gold;
+}
+
+.ans-container img {
+    max-width: 90%;
+}
+
 .user-msg {
     margin: 20px;
     background-color: brown;

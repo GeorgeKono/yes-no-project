@@ -4,7 +4,12 @@ function onAsk(ev) {
     ev.preventDefault()
     checkUserInput()
     
-    showLoader()
+    getAns(renderAns)
+}
+
+function renderAns(msg) {
+    document.querySelector('.ans-container h2').innerHTML = msg.answer
+    document.querySelector('.ans-container img').src = msg.image
 }
 
 function checkUserInput() {
@@ -14,6 +19,8 @@ function checkUserInput() {
     if (userInput.length < 3 || userInput.slice(-1) !== '?') {
         showUserMsg()
         return
+    } else {
+        showLoader()
     }
 }
 
@@ -25,6 +32,12 @@ function hideUserMsg() {
     document.querySelector('.user-msg').hidden = true
 }
 
+function showAns() {
+    document.querySelector('.ans-container').hidden = false
+    document.querySelector('.loader-container').hidden = true
+}
+
 function showLoader() {
+    document.querySelector('.ans-container').hidden = true
     document.querySelector('.loader-container').hidden = false
 }
