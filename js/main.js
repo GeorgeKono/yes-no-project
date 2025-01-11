@@ -21,6 +21,7 @@ function checkUserInput() {
     
     if (userInput.length < 3 || userInput.slice(-1) !== '?') {
         showUserMsg()
+        hideAns()
         return false
     }
     
@@ -40,6 +41,10 @@ function hideUserMsg() {
 function showAns() {
     document.querySelector('.ans-container').hidden = false
     document.querySelector('.loader-container').hidden = true
+}
+
+function hideAns() {
+    document.querySelector('.ans-container').hidden = true
 }
 
 function showLoader() {
