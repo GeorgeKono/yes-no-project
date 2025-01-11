@@ -11,13 +11,18 @@
         <h1>Ask anything</h1>
         <h3>Yes/No</h4>
 
-        <form onsubmit="onAsk(event)">
-            <input type="text" class="user-question" oninput="hideUserMsg()" placeholder="Your Question">
-            <button class="ask-btn">Ask</button>
-            <div hidden class="user-msg">
-                <h6>Please ask a question with at least 3 characters and ends with "?" symbol</h6>
-            </div>
-        </form>
+        <section class="question-container">
+            <form onsubmit="onAsk(event)">
+                <input type="text" class="user-question" oninput="hideUserMsg()" placeholder="Your Question">
+                <button class="ask-btn">Ask</button>
+                <div hidden class="user-msg">
+                    <h6>Please ask a question with at least 3 characters and ends with "?" symbol</h6>
+                </div>
+            </form>
+        </section>
+        <section hidden class="loader-container">
+            <img src="./img/loader.svg" alt="">
+        </section>
     </section>
 
     <script src="js/main.js"></script>

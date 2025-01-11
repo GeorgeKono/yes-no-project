@@ -2,10 +2,12 @@
 
 function onAsk(ev) {
     ev.preventDefault()
-    checkInput()    
+    checkUserInput()
+    
+    showLoader()
 }
 
-function checkInput() {
+function checkUserInput() {
     const userInput = document.querySelector('.user-question').value
     console.log('user input:', userInput)
     
@@ -21,4 +23,8 @@ function showUserMsg() {
 
 function hideUserMsg() {
     document.querySelector('.user-msg').hidden = true
+}
+
+function showLoader() {
+    document.querySelector('.loader-container').hidden = false
 }
